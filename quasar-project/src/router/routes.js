@@ -6,9 +6,14 @@ const routes = [
       { path: '', component: () => import('pages/IndexPage.vue') }
     ]
   },
-
-  // Always leave this as last one,
-  // but you can also remove it
+  {
+    path: '/TestPage',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/TestPage.vue') }
+    ]
+  },
+  // Diese Route fängt alle nicht definierten Routen ab und zeigt die Fehlerseite an
   {
     path: '/:catchAll(.*)*',
     component: () => import('pages/ErrorNotFound.vue')
