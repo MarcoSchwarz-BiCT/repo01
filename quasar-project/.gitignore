@@ -31,3 +31,6 @@ yarn-error.log*
 
 # local .env files
 .env.local*
+
+# react native
+/Users/marcoschwarz/Documents/BiCT/Projekte/ÜK_App-Entwicklung/Code/repo01/MyNewProject
