@@ -5,3 +5,5 @@
 /node_modules
 .eslintrc.cjs
 /quasar.config.*.temporary.compiled*
+# Ignoriere generierte Dateien
+android/app/build/**/*.js

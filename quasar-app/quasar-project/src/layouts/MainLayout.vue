@@ -28,15 +28,16 @@
         <q-item-label
           header
         >
-          Essential Links
+          Menu
         </q-item-label>
 
-        <EssentialLink
+        <!-- <EssentialLink
           v-for="link in linksList"
           :key="link.title"
-          v-bind="link"
-        />
+          v-bind="link" 
+        /> -->
       </q-list>
+      <NavigationLink />
     </q-drawer>
 
     <q-page-container>
@@ -48,6 +49,7 @@
 <script setup>
 import { ref } from 'vue'
 import EssentialLink from 'components/EssentialLink.vue'
+import NavigationLink from 'components/NavigationLink.vue'
 
 defineOptions({
   name: 'MainLayout'
@@ -103,4 +105,5 @@ const leftDrawerOpen = ref(false)
 function toggleLeftDrawer () {
   leftDrawerOpen.value = !leftDrawerOpen.value
 }
+
 </script>
